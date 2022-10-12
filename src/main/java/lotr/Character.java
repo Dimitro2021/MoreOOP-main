@@ -5,13 +5,12 @@ package lotr;//class Character{
 import lombok.AllArgsConstructor;
 import lombok.Setter;
 import lombok.Getter;
-import lombok.ToString;
 import static java.lang.Math.max;
 
 @AllArgsConstructor
 public
 class Character{
-    @Getter @Setter
+    @Getter
     int hp;
     @Getter
     int power;
@@ -23,7 +22,7 @@ class Character{
 
     boolean isAlive(){return this.hp > 0;}
     public void kick(Character c){
-        System.out.println("aaoaoa");
+        c.setHp(c.getHp()-this.power);
     }
 
 
@@ -36,24 +35,6 @@ class Character{
     }
 }
 
-//class Hobbit
-//  - attributes: int power=0, int hp=3
-//          - methods: void kick(Character c) { toCry() }
-//class Elf
-//   - attributes: int power=10, int hp=10
-//           - methods: void kick(Character c) {
-//           kill everybody weaker than him,
-//           otherwise decrease the power of character by 1
-//           }
-//class King
-//   - attributes: int power=from 5 to 15, int hp=from 5 to 15
-//           - methods: void kick(Character c) {
-//           decrease number of hp of the enemy by random
-//           number which will be in the range of his power
-//           }
-//class Knight
-//   - attributes: int power=from 2 to 12, int hp=from 2 to 12
-//           - methods: void kick(Character c) { like King }
 //class CharacterFactory
 //   - methods: Character createCharacter() {
 //           returns random instance of any existing character

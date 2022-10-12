@@ -1,13 +1,15 @@
+import lotr.King;
+import lotr.Character;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class KingTest {
-    private Character character;
+    private King character;
 
     @BeforeEach
-    public void init() { character = new King(); }
+    public void init() { character = new King();}
 
     @Test
     public void testIsClass() {

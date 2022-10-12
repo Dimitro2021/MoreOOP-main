@@ -6,6 +6,9 @@ public class Hobbit extends Character{
     }
     @Override
     public void kick(Character c) {
-        c.setHp(c.getHp());
+        toCry();
+    }
+    private void toCry(){
+        System.out.println("cry cry cry");
     }
 }
